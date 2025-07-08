@@ -88,6 +88,12 @@
     text-align: center;
     color: white;
     border: none;
+    transition: 0.6s ease;
+}
+
+.text button:hover {
+    background: #B90160;
+    transform: scale(1.15);
 }
 
 .title {
@@ -371,11 +377,20 @@ footer {
         width: 140px;
         font-size: 14px;
     }
-}
+}   
 
 @media (max-width:500px) {
     .navbar {
         justify-content: center;
+    }
+    .parent-container2 {
+        margin-top: 720px;
+    }
+}
+
+@media (max-width:400px) {
+    .parent-container2 {
+        margin-top: 800px;
     }
 }
 
@@ -392,10 +407,14 @@ footer {
     }
     .text button {
         width: 100px;
+        height: 35px;
         font-size: 10px;
     }
     .title {
         font-size: 30px;
+    }
+    .parent-container2 {
+        margin-top: 800px;
     }
     .parent-container2 p {
         font-size: 14px;
@@ -405,3 +424,200 @@ footer {
         top: -40px;
     }
 }
+
+@media (max-width:225px) {
+    .parent-container2 {
+        margin-top: 1000px;
+    }
+}
+
+body:has(#order:target) {
+      overflow: hidden;
+}
+
+.modal {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(22px);
+    display: none;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.modal-context h2 {
+    font-family: 'Roboto';
+    font-weight: 530;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.close {
+    justify-self: end;
+    margin-top: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #D4145A;
+}
+
+#order:target {
+    display: grid;
+}
+
+form {
+    background-color: white;
+    width: 90%;
+    max-width: 800px;
+    padding: 0px 20px;
+    height: auto;
+    box-shadow: 0px 0px 35px 0px #D4145A40;
+    border-radius: 15px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+    z-index: 1002;
+    margin: 0 auto;
+}
+
+input {
+    width: 100%;
+    max-width: 362px;
+    height: 50px;
+    border: 1px solid #A1A1A1;
+    border-radius: 9px;
+    padding-left: 20px;
+}
+
+.input-child {
+    display: flex;
+    gap: 25px;
+}
+
+.input-container button {
+    width: 169px;
+    height: 42px;
+    opacity: 1;
+    border-radius: 9px;
+    background: linear-gradient(96.12deg, #D4145A -21.03%, #3D5BF5 103.56%);
+    border: none;
+    justify-self: center;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: white;
+    transition: 0.6s ease;
+}
+
+.input-container button:hover {
+    background: #B90160;
+    transform: scale(1.15);
+}
+
+.input-container {
+    display: grid;
+    gap: 25px;
+    width: 100%;
+    justify-items: center;
+}
+
+textarea {
+    width: 90%;
+    max-width: 755px;
+    height: 61px;
+    padding: 20px;
+    border: 1px solid #A1A1A1;
+    border-radius: 9px;
+    max-height: 70vh;
+    resize: none;    
+    overflow-y: auto;
+}
+
+@media (max-width: 460px) {
+  .input-child {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  input {
+    width: 300px;
+  }
+
+  textarea {
+    width: 283px;
+  }
+
+  .input-container button {
+    width: 150px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width:420px) {
+    input {
+        width: 260px;
+    }
+    textarea {
+        width: 243px;
+    }
+}
+
+@media (max-width:360px) {
+    input {
+        width: 220px;
+        height: 40px;
+    }
+
+    textarea {
+        width: 203px;
+        height: 50px;
+    }
+}
+
+@media (max-width:320px) {
+    .modal-context h2 {
+        font-size: 18px;
+    }
+    input {
+        width: 180px;
+        font-size: x-small;
+    }
+    textarea {
+        width: 163px;
+        font-size: smaller;
+    }
+    .close {
+        font-size: small;
+    }
+}
+
+@media (max-width:250px) {
+    input {
+        width: 150px;
+    }
+    textarea {
+        width: 133px;
+    }
+    .input-container button {
+        width: 110px;
+        font-size: 12px;
+    }
+}
+
+
+

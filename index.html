@@ -24,11 +24,29 @@
             <div class="header_block">
                 <div class="text">
                     <h1>Инновационные коврики для автомобиля</h1>
-                    <button>ЗАКАЗАТЬ</button>
+                    <a href="#order"><button>ЗАКАЗАТЬ</button></a>
                 </div>
                 <img src="./imgs/img2.png" alt="">
             </div>
         </header>
+
+        <div id="order" class="modal">
+            <a href="#" class="modal-overlay" onclick="document.querySelector('#order form').reset();"></a>
+            <form action="#">
+                <a href="#" class="close" onclick="document.querySelector('#order form').reset();">Закрыть</a>
+            <div class="modal-context">
+                <h2>ФОРМА ЗАЯВКИ</h2>
+            </div>
+            <div class="input-container">
+              <div class="input-child">
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="email" name="" id="" placeholder="Ваш e-mail" required>
+              </div>
+                <textarea name="" id="" placeholder="Ваше сообщение (марка автомобиля, цвет ковриков, номер телефона)" required></textarea>
+                <button type="submit">Отправить</button>
+            </div>
+        </form>
+        </div>
 
         <main>
             <h1 class="title">Что такое <span class="logo-title">EVA</span> коврики?</h1>
