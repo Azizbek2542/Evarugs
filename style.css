@@ -501,6 +501,13 @@ input {
     padding-left: 20px;
 }
 
+button[type="reset"] {
+    background: grey !important;
+}
+button[type="reset"]:hover {
+    transform: unset !important;
+}
+
 .input-child {
     display: flex;
     gap: 25px;
