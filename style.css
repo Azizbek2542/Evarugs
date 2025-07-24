@@ -327,6 +327,9 @@ footer {
     .parent-container {
         left: 0;
     }
+    .submit-msg {
+        left: 43% !important;
+    }
 }
 
 @media (max-width:865px) {
@@ -371,6 +374,9 @@ footer {
     .child p {
         font-size: 18px !important;
     }
+    .submit-msg {
+        left: 40% !important;
+    }
 }
 
 @media (max-width:600px) {
@@ -388,6 +394,9 @@ footer {
         width: 140px;
         font-size: 14px;
     }
+    .submit-msg {
+        left: 38% !important;
+    }
 }   
 
 @media (max-width:500px) {
@@ -396,6 +405,9 @@ footer {
     }
     .parent-container2 {
         margin-top: 920px;
+    }
+    .submit-msg {
+        left: 36% !important;
     }
 }
 
@@ -605,6 +617,9 @@ textarea {
     textarea {
         width: 243px;
     }
+    .submit-msg {
+        left: 33% !important;
+    }
 }
 
 @media (max-width:360px) {
@@ -634,6 +649,9 @@ textarea {
     .close {
         font-size: small;
     }
+    .submit-msg {
+        left: 30% !important;
+    }
 }
 
 @media (max-width:250px) {
@@ -646,6 +664,9 @@ textarea {
     .input-container button {
         width: 110px;
         font-size: 12px;
+    }
+    .submit-msg {
+        left: 25% !important;
     }
 }
 
@@ -687,4 +708,3 @@ textarea {
         background-size: auto;
     }
 }
-
