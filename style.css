@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 @media (min-width:1600px) {
     body {
         justify-self: center;
@@ -22,12 +26,16 @@
     display: flex;
     align-items: center;
     gap: 11px;
+}
+
+.navbar-logo a {
     color: black;
     font-family: 'Roboto';
     font-weight: 900;
     font-size: 25px;
     line-height: 100%;
     letter-spacing: 0%;
+    text-decoration: none;
 }
 
 .navbar_a {
@@ -158,7 +166,7 @@
     padding-left: 20px;
     font-family: 'Roboto';
     font-weight: 300;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 100%;
     letter-spacing: 0%;
     color: #767676;
@@ -172,6 +180,7 @@
     margin-top: 225px;
     height: 357px;
     padding: 0px 5px;
+    scroll-margin-top: 200px;
 }
 
 .parent-container2 p {
@@ -349,7 +358,7 @@ footer {
         text-align: center;
     }
     .parent-container2 {
-        margin-top: 650px;
+        margin-top: 800px;
     }
     .bg-img {
         left: -250px;
@@ -358,7 +367,9 @@ footer {
     .parent-container {
         left: 250px;
         top: -370px;
-
+    }
+    .child p {
+        font-size: 18px !important;
     }
 }
 
@@ -384,13 +395,7 @@ footer {
         justify-content: center;
     }
     .parent-container2 {
-        margin-top: 720px;
-    }
-}
-
-@media (max-width:400px) {
-    .parent-container2 {
-        margin-top: 800px;
+        margin-top: 920px;
     }
 }
 
@@ -414,7 +419,7 @@ footer {
         font-size: 30px;
     }
     .parent-container2 {
-        margin-top: 800px;
+        margin-top: 1100px;
     }
     .parent-container2 p {
         font-size: 14px;
@@ -425,9 +430,9 @@ footer {
     }
 }
 
-@media (max-width:225px) {
+@media (max-width:275px) {
     .parent-container2 {
-        margin-top: 1000px;
+        margin-top: 1400px;
     }
 }
 
@@ -478,6 +483,10 @@ body:has(#order:target) {
 
 form {
     background-color: white;
+    background-image: url(./imgs/input-img.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 90%;
     max-width: 800px;
     padding: 0px 20px;
@@ -640,5 +649,42 @@ textarea {
     }
 }
 
+.submit-msg {
+    position: fixed;
+  z-index: 1100;
+  top: 25px; 
+  left: 46.7%;
+  transform: translateX(-50%) translateY(-10px);
+  background: lime;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  height: 26px;
+  width: fit-content;
+  max-width: 90%;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: 0.75s ease;
+  pointer-events: none;
+  padding: 0px 10px;
+}
 
+.submit-msg h1 {
+  color: black;
+  font-size: 15px;
+}
+
+.submit-msg.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media(max-width:500px) {
+    form {
+        background-position: right;
+        background-size: auto;
+    }
+}
 

@@ -8,17 +8,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="submit-msg" id="submit-msg">
+        <h1>Отправлено</h1>
+        <svg class="sbmt-msg-svg" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 16 16"><g fill="black"><path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26l.001.002l4.995 3.178l1.59 2.498C8 14 8 13 8 12.5a4.5 4.5 0 0 1 5.026-4.47zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215l7.494-7.494l1.178-.471z"/><path d="M16 12.5a3.5 3.5 0 1 1-7 0a3.5 3.5 0 0 1 7 0m-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95l-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686"/></g></svg>
+    </div> 
     <section class="container">
         <header>
             <div class="navbar">
                 <div class="navbar-logo">
-                    <img src="./imgs/img1.svg" alt="">
-                    <h1>EVARUGS</h1>
+                    <a href=""><img src="./imgs/img1.svg" alt=""></a>
+                    <a href=""><h1>EVARUGS</h1></a>
                 </div>
                 <div class="navbar_a">
-                    <a href="">отзывы</a>
-                    <a href="">что это?</a>
-                    <a href="">контакты</a>
+                    <a href="#отзывы">отзывы</a>
+                    <a href="#">что это?</a>
+                    <a href="#контакты">контакты</a>
                 </div>
             </div>
             <div class="header_block">
@@ -32,7 +36,7 @@
 
         <div id="order" class="modal">
             <a href="#" class="modal-overlay" onclick="document.querySelector('#order form').reset();"></a>
-            <form action="#">
+            <form id="Contact-form" action="#">
                 <a href="#" class="close" onclick="document.querySelector('#order form').reset();">Закрыть</a>
             <div class="modal-context">
                 <h2>ФОРМА ЗАЯВКИ</h2>
@@ -70,7 +74,7 @@
                 </div>
             </div>
             </div>
-            <div class="parent-container2">
+            <div id="отзывы" class="parent-container2">
                 <div class="child2">
                     <img data-aos="zoom-in" data-aos-duration="1200" src="./imgs/mask1.png" alt="">
                     <p>Коврики супер!!! Качество на высшем уровне!! Удачи и побольше заказов вам!!! Большое спасибо!</p>
@@ -86,7 +90,7 @@
             </div>
         </main>
 
-        <footer>
+        <footer id="контакты">
             <div class="footer-navbar">
                 <div class="social-media">
                     <p class="title2">МЫ В СОЦИАЛЬНЫХ СЕТЯХ</p>
@@ -106,6 +110,28 @@
 
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+<script>
+  const form = document.getElementById("Contact-form");
+  const msg = document.getElementById("submit-msg");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    if (form.checkValidity()) {
+      msg.classList.add("active");
+
+      setTimeout(() => {
+        msg.classList.remove("active");
+        form.reset(); 
+      }, 1200);
+    } else {
+      form.reportValidity();
+    }
+  });
+</script>
+
 
 <script>
   AOS.init({
